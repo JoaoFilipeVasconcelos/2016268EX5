@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EX5JV</title>
+		<meta name="description" content="EX5">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+		<meta name="author" content="João Vasconcelos">
+		<meta http-equiv="refresh" content="30">
+		<meta charset="UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<a id="menu_icon">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z" fill="white"/>
+				</svg>
+			</a>
+			<div id="drawer">
+				<nav>
+					<a href="#unordered"> Unordered List </a>
+					<a href="#ordered"> Ordered List</a>
+					<a href="#color"> Color Codes</a>
+					<a href="#video"> Video Tags</a>
+					<a href="#table"> Table Tags</a>
+				</nav>
+			 </div>
+			<h1>Árvores Antigas</h1>
+			<p>Força da Natureza </p>
+			<h4>Interaction Design</h4>
+			<hr>
+		</header>
+		
+		<nav id="tabletPC" class="col-3">	
+				<a href="#unordered"> Unordered List</a>
+				<br/>
+				<a href="#ordered"> Ordered List</a>
+				<br/>
+				<a href="#color"> Color Codes</a>
+				<br/>
+				<a href="#video"> Video</a>
+				<br/>
+				<a href="#table"> Table</a>
+		</nav>
+		
+		<div id="container" class="col-9"> 
+			<section class="slideshow-container">
+				<h2>Natureza Slideshow</h2>
+				<article class="mySlides"class="fade">
+					<figure>
+						<img src="images/pexels-photo-807598.jpeg" width="800" height="auto"/>
+						<figcaption>Figure 1: Folhas </figcaption>
+					</figure>
+				</article>
+
+				<article class="mySlides" class="fade">
+					<figure>
+						<img src="images/pexels-photo-814499.jpeg" width="800" height="auto"/>
+						<figcaption>Figure 2: Lago </figcaption>
+					</figure>
+				</article>
+				
+				<article class="mySlides" class="fade">	
+					<figure>
+						<img src="images/pexels-photo-934964.jpeg" width="800" height="auto"/>
+						<figcaption>Figure 3: Céu </figcaption>
+					</figure>
+				</article>
+				
+				<div class="dotpoints">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+			</section>	
+			<section>
+					<a name="unordered"></a>
+					<h2> Unordered List Tag </h2>
+					<p>The language is made up of a set of codes and symbols that will generate:</p>
+					<ul>
+						<li> text, </li>
+						<li> images,</li>
+						<li> sounds,</li>
+						<li> frames </li>
+						<li> animation on your browser pages. </li>
+					</ul>
+			</section>
+			<section>
+					<a name="ordered"></a>
+					<h2> Ordered List Tag </h2>
+					<i> Two common ways to start </i>
+					<ol>
+						<li><u> to create your </u></li>
+						<li><u> Use HTML generator </u></li>
+					</ol>
+					<br>
+			</section>
+			<section>
+					<a name="color"></a>
+					<h2>Color Codes</h2>		
+					<p> Information about color tags </p>
+					<br>
+					<img src = "http://www.theodora.com/gif4/html_colors.gif">
+					<hr>
+					<img src ="https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?cs=srgb&dl=bench-carved-stones-cemetery-257360.jpg&fm=jpg" width="800" height="auto"/>
+					<hr>
+					<img src ="https://images.pexels.com/photos/34950/pexels-photo.jpg?cs=srgb&dl=abandoned-forest-hd-wallpaper-34950.jpg&fm=jpg" width="800" height="auto"/>
+					<hr>
+			</section>
+			<section>
+					<a name="video"></a>
+					<h2>Video</h2>
+					<video width="800" height="auto" controls>
+					<source src="videos/nostalgia.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+					<hr>
+			</section>
+			<section>
+					<a name="table"></a>
+					<h2>Table</h2>
+					<table border="1px">
+						<th colspan="3"> Árvores </th>
+						<tr>
+							<td>Cretáceo  </td> <td> Carbonífero </td> <td> Triássico </td>
+						</tr>
+						<tr>
+							<td rowspan="4"> Angiospermas</td>
+							
+							<td rowspan="3"> Samambaias </td>
+							<td> Coníferas </td>
+						</tr>
+						<tr>
+							<td> Ginkgos </td>
+						</tr>
+						<tr>
+							<td> Cicadáceas </td>
+						</tr>
+						<tr>
+							<td> Cavalinhas </td> <td> Gimnospermas </td>
+						</tr>
+					</table>
+			</section>
+		</div>
+			<aside class="col-2">
+				<h3>Aside</h3>
+				<p>Esta zona serve para colocar informacao menos relevante</p>
+			</aside>
+	<footer>
+		<h2>Developed by João Vasconcelos</h2>
+	</footer> 
+	<script>
+		let slideIndex = 0;
+		showSlides();
+			
+		function showSlides() {
+			let i = null;
+			let slides = document.getElementsByClassName("mySlides");
+			let dots = document.getElementsByClassName("dot");
+			
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+				
+			slideIndex++;
+			if (slideIndex > slides.length) {
+				slideIndex = 1
+			}
+				
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace("active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 3000); // Change image every 3 seconds
+		}
+			
+		var menu_icon = document.querySelector('#menu_icon');
+		var container = document.querySelector("#container");
+		var drawer = document.querySelector('#drawer');
+
+		menu_icon.addEventListener('click', function (e) {
+			drawer.classList.toggle('open');
+			e.stopPropagation();
+		});
+		container.addEventListener('click', function () {
+			drawer.classList.remove('open');
+		});
+
+
+	</script>
+	</body>
+</html>
